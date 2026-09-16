@@ -1,0 +1,222 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --cinza-fundo: rgb(177, 177, 177);
+    --cinza-claro: rgb(240, 240, 240);
+    --cinza-botao: rgb(219, 219, 219);
+    --preto: rgb(0, 0, 0);
+    --vermelho: rgb(150, 0, 0);
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--cinza-fundo);
+    color: var(--preto);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body.centralizado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.pagina {
+    width: min(960px, 100%);
+    margin: 0 auto;
+    padding: 34px 20px 48px;
+}
+
+.pagina-pequena {
+    width: min(540px, 100%);
+}
+
+.cabecalho {
+    border-bottom: 2px solid var(--preto);
+    margin-bottom: 24px;
+    padding-bottom: 14px;
+}
+
+.cabecalho h1, h1 {
+    margin: 0 0 6px;
+    font-size: clamp(24px, 4vw, 34px);
+}
+
+.cabecalho p, .subtitulo {
+    margin: 0;
+    font-size: 15px;
+}
+
+.cartao {
+    width: 100%;
+    border: 2px solid var(--preto);
+    background: rgba(240, 240, 240, 0.58);
+    padding: 22px;
+}
+
+.login-cartao {
+    max-width: 390px;
+    text-align: center;
+}
+
+.logo {
+    height: 82px;
+    margin: 4px 0 14px;
+}
+
+.linha {
+    height: 2px;
+    width: 100%;
+    background: var(--preto);
+    border: 0;
+    margin: 12px 0 20px;
+}
+
+.formulario {
+    display: grid;
+    gap: 14px;
+}
+
+.campo {
+    display: grid;
+    gap: 6px;
+    text-align: left;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid var(--preto);
+    background: var(--cinza-claro);
+    color: var(--preto);
+    font: 16px 'Courier New', Courier, monospace;
+}
+
+textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: 0;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, .18);
+}
+
+button, .botao {
+    display: inline-block;
+    border: 2px solid var(--preto);
+    background: var(--cinza-botao);
+    color: var(--preto);
+    padding: 11px 18px;
+    cursor: pointer;
+    font: bold 15px 'Courier New', Courier, monospace;
+    text-decoration: none;
+    text-align: center;
+}
+
+button:hover, .botao:hover {
+    background: white;
+}
+
+.botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.botao-vermelho {
+    color: white;
+    background: var(--vermelho);
+}
+
+.botao-vermelho:hover {
+    background: rgb(105, 0, 0);
+}
+
+.mensagem {
+    min-height: 20px;
+    margin: 12px 0 0;
+    font-weight: bold;
+}
+
+.erro { color: var(--vermelho); }
+.sucesso { color: rgb(0, 90, 0); }
+
+.grade-menu, .grade-formulario {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.opcao {
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.opcao h2 {
+    margin: 0 0 10px;
+    font-size: 20px;
+}
+
+.opcao p { line-height: 1.45; }
+
+.grade-formulario .campo-largo { grid-column: 1 / -1; }
+
+.tabela-area {
+    overflow-x: auto;
+    border: 2px solid var(--preto);
+    background: var(--cinza-claro);
+}
+
+table {
+    width: 100%;
+    min-width: 620px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 11px;
+    border-bottom: 1px solid var(--preto);
+    text-align: left;
+}
+
+th { background: var(--cinza-botao); }
+
+.lista-vazia {
+    padding: 20px;
+    text-align: center;
+}
+
+.confirmacao {
+    text-align: center;
+    padding: 34px 22px;
+}
+
+.confirmacao .check {
+    display: inline-block;
+    border: 3px solid var(--preto);
+    padding: 12px 18px;
+    margin-bottom: 12px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+@media (max-width: 650px) {
+    .pagina { padding: 22px 14px 38px; }
+    .grade-menu, .grade-formulario { grid-template-columns: 1fr; }
+    .grade-formulario .campo-largo { grid-column: auto; }
+    .botoes > * { flex: 1 1 100%; }
+}
+
+@media (min-width: 651px) {
+    .login-cartao .botoes { justify-content: center; }
+}

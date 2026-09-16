@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clube de Tiro — Registro de treino</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="pagina pagina-pequena">
+        <header class="cabecalho">
+            <h1>Registro de treino</h1>
+            <p>Preencha os dados da sessão realizada.</p>
+        </header>
+        <section class="cartao">
+            <form id="form-treino" class="formulario">
+                <label class="campo">Nome do sócio
+                    <input name="nome" type="text" placeholder="Quem realizou o treino?" required>
+                </label>
+                <label class="campo">Modalidade
+                    <select name="modalidade" required>
+                        <option value="">Selecione</option>
+                        <option>Pistola</option>
+                        <option>Carabina</option>
+                        <option>Iniciação</option>
+                        <option>Arco e flecha</option>
+                    </select>
+                </label>
+                <label class="campo">Quantidade de disparos
+                    <input name="disparos" type="number" min="1" placeholder="Ex.: 30" required>
+                </label>
+                <label class="campo">Observação
+                    <textarea name="observacao" placeholder="Anote alguma observação do instrutor"></textarea>
+                </label>
+                <div class="botoes">
+                    <button type="submit">REGISTRAR TREINO</button>
+                    <a class="botao" href="menu.html">Cancelar</a>
+                </div>
+            </form>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

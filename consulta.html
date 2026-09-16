@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clube de Tiro — Consulta</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="pagina">
+        <header class="cabecalho">
+            <h1>Consulta de sócios</h1>
+            <p>Confira os membros registrados no clube.</p>
+        </header>
+        <section class="cartao">
+            <label class="campo">Pesquisar por nome, CPF ou modalidade
+                <input id="busca-socio" type="search" placeholder="Digite para filtrar a lista">
+            </label>
+            <br>
+            <div class="tabela-area">
+                <table>
+                    <thead>
+                        <tr><th>Nome</th><th>CPF</th><th>Modalidade</th><th>Telefone</th><th>Cadastro</th></tr>
+                    </thead>
+                    <tbody id="corpo-tabela"></tbody>
+                </table>
+            </div>
+            <div class="botoes">
+                <a class="botao" href="cadastro.html">Novo cadastro</a>
+                <a class="botao" href="menu.html">Voltar ao menu</a>
+            </div>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

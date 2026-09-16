@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clube de Tiro — Cadastro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="pagina pagina-pequena">
+        <header class="cabecalho">
+            <h1>Cadastro de sócio</h1>
+            <p>Tela para registrar um novo membro do clube.</p>
+        </header>
+        <section class="cartao">
+            <form id="form-cadastro" class="formulario">
+                <label class="campo">Nome completo
+                    <input name="nome" type="text" placeholder="Ex.: João da Silva" required>
+                </label>
+                <label class="campo">CPF
+                    <input name="cpf" type="text" placeholder="000.000.000-00" required>
+                </label>
+                <label class="campo">Telefone
+                    <input name="telefone" type="tel" placeholder="(00) 00000-0000" required>
+                </label>
+                <label class="campo">Modalidade preferida
+                    <select name="modalidade" required>
+                        <option value="">Selecione</option>
+                        <option>Iniciação</option>
+                        <option>Carabina</option>
+                        <option>Pistola</option>
+                        <option>Arco e flecha</option>
+                    </select>
+                </label>
+                <div class="botoes">
+                    <button type="submit">SALVAR CADASTRO</button>
+                    <a class="botao" href="menu.html">Cancelar</a>
+                </div>
+            </form>
+            <p id="mensagem-cadastro" class="mensagem" aria-live="polite"></p>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

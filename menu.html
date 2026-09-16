@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clube de Tiro — Menu principal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="pagina">
+        <header class="cabecalho">
+            <h1>Clube de Tiro</h1>
+            <p>Menu principal — usuário conectado: <strong data-usuario>instrutor</strong></p>
+        </header>
+        <section class="grade-menu">
+            <article class="cartao opcao">
+                <div><h2>01. Cadastrar sócio</h2><p>Registre um novo membro do clube no sistema.</p></div>
+                <a class="botao" href="cadastro.html">Abrir cadastro</a>
+            </article>
+            <article class="cartao opcao">
+                <div><h2>02. Consultar sócios</h2><p>Veja a lista de sócios já cadastrados.</p></div>
+                <a class="botao" href="consulta.html">Abrir consulta</a>
+            </article>
+            <article class="cartao opcao">
+                <div><h2>03. Registrar treino</h2><p>Lance uma nova sessão de treinamento.</p></div>
+                <a class="botao" href="treino.html">Registrar treino</a>
+            </article>
+            <article class="cartao opcao">
+                <div><h2>04. Sair</h2><p>Volte para a tela de acesso do sistema.</p></div>
+                <a class="botao botao-vermelho" href="index.html" onclick="sessionStorage.clear()">Sair do sistema</a>
+            </article>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

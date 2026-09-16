@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clube de Tiro — Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="centralizado">
+    <main class="cartao login-cartao">
+        <img class="logo" src="usuario.png" alt="Ícone de usuário">
+        <h1>Faça o login</h1>
+        <hr class="linha">
+        <form id="form-login" class="formulario">
+            <label class="campo">Usuário
+                <input id="usuario" name="usuario" type="text" placeholder="Digite seu usuário" autocomplete="username">
+            </label>
+            <label class="campo">Senha
+                <input id="senha" name="senha" type="password" placeholder="Digite sua senha" autocomplete="current-password">
+            </label>
+            <button type="submit">ENTRAR NO SISTEMA</button>
+        </form>
+        <p id="mensagem-login" class="mensagem" aria-live="polite"></p>
+        <div class="botoes">
+            <a class="botao" href="cadastro.html">Cadastrar novo sócio</a>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
